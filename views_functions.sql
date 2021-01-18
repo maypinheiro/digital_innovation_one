@@ -87,7 +87,7 @@ CREATE OR REPLACE VIEW vw_cliente_transacoes (
             cliente_transacoes.conta_corrente_digito,
             tipo_transacao.nome AS transacao_nome,
             cliente_transacoes.valor
-    FROM cliente
+    FROM cliente 
     JOIN cliente_transacoes ON cliente_transacoes.cliente_numero = cliente.numero
     JOIN agencia ON agencia.numero = cliente_transacoes.agencia_numero
     JOIN banco ON banco.numero = cliente_transacoes.banco_numero
